@@ -1,0 +1,177 @@
+/* Please ❤ this if you like it! */
+/* Follow Me https://codepen.io/designfenix */
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+body{
+  font-family: Lato, sans-serif;
+  background-color: #efeeee;
+  
+}
+.slider{
+  .itm{
+    display: block!important;
+    text-align: center;
+    padding: 50px 0;
+    max-width: 550px;
+    margin: 50px auto;
+    border-radius: 25px;
+    box-shadow: 8px 8px 16px rgba(100,100,100,.1), 
+            -8px -8px 16px rgba(255,255,255,.4);
+    
+    img{
+      display: inline-block;
+      width: 80px;
+      opacity: .5;
+      
+    }
+    p{
+      max-width: 60%;
+      margin: 30px auto;
+      font-weight: normal;
+      color: #525252;
+      font-size: 14px;
+      text-shadow: rgba(255,255,255,.7) 1px 1px 0;
+    }
+  }
+  .slick-active{
+      img{
+        -webkit-animation: rotate-in-2-fwd-ccw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: rotate-in-2-fwd-ccw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;  
+      }
+    p{
+      -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      animation-delay: .3s;
+    }
+    }
+    
+}
+section{
+  z-index: 2;
+  position: absolute;
+  width:100%;
+  left:0;
+  right:0;
+  top:0;
+  overflow: hidden;
+}
+.bg{
+  z-index: 0;
+  position: absolute;
+  width:100%;
+  left:0;
+  right:0;
+  top:0;
+  overflow: hidden;
+  height: 100vh;
+}
+.next{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20%;
+  left:50%;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 0 0 5px 4px rgba(255,255,255,.2),8px 8px 16px rgba(100,100,100,.1),  -8px -8px 16px rgba(255,255,255,.6);
+  background: #ffe9f2;
+  border-radius: 100%;
+  z-index: 1;
+  &:after{
+    content:'';
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    animation: waves 4s linear infinite;
+    box-shadow: 0.4rem 0.4rem 0.8rem rgba(100,100,100,.1), -0.4rem -0.4rem 0.8rem rgba(255,255,255,.6);
+    bottom: 0;
+    position: absolute;
+  }
+  svg{
+    path{
+      box-shadow: inset 0 0 5px 4px rgba(255,255,255,.2),8px 8px 16px rgba(100,100,100,.1),  -8px -8px 16px rgba(255,255,255,.6);
+    }
+    margin-left: 12px;
+    margin-top: 12px;
+    stroke: transparent;
+    fill: #ccc;
+    
+  }
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotate-in-2-fwd-ccw {
+  0% {
+    -webkit-transform: translateZ(-200px) rotate(45deg);
+            transform: translateZ(-200px) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotate(0);
+            transform: translateZ(0) rotate(0);
+    opacity: .7;
+  }
+}
+@keyframes rotate-in-2-fwd-ccw {
+  0% {
+    -webkit-transform: translateZ(-200px) rotate(45deg);
+            transform: translateZ(-200px) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotate(0);
+            transform: translateZ(0) rotate(0);
+    opacity: .7;
+  }
+}
+
+@keyframes ping {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0.8;
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(2.2);
+            transform: scale(2.2);
+    opacity: 0;
+  }
+}
+@keyframes waves {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}

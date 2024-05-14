@@ -1,0 +1,120 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#k:after, #k:before, *:before,
+*:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+#y:after, #y:before, #wrapper {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+html {
+  background: #e4e4e2;
+}
+
+#wrapper {
+  position: absolute;
+  width: 448px;
+  height: 250px;
+}
+
+#t {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 24px;
+  background: #e4e4e2;
+  box-shadow: 41px 25px 82px #c9c9c7, -41px -25px 82px #fffffd;
+}
+#t:before, #t:after {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  bottom: 70px;
+  box-shadow: inset 1px 1px 2px 0 rgba(255, 255, 255, 0.8), 4px 4px 10px #b6b6b5, -4px -4px 10px #ffffff;
+  background: linear-gradient(145deg, #cdcdcb, #f4f4f2);
+}
+#t:before {
+  right: 54px;
+}
+#t:after {
+  right: 110px;
+}
+
+#y {
+  position: absolute;
+  bottom: 22px;
+  left: 30px;
+  width: 206px;
+  height: 206px;
+  border-radius: 50%;
+  background: #EAEAE8;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8), 5px 5px 16px #c0c0be, -5px -5px 16px #ffffff;
+}
+#y:before {
+  width: 176px;
+  height: 176px;
+  border-radius: inherit;
+  background-image: radial-gradient(#848793 20%, transparent 40%);
+  background-position: 2.5px 2.5px;
+  background-size: 9px 9px;
+  transform: rotate(45deg);
+}
+#y:after {
+  width: 178px;
+  height: 178px;
+  border-radius: inherit;
+  box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.15), inset -4px -4px 2px rgba(255, 255, 255, 0.6);
+}
+
+#k {
+  width: 38px;
+  height: 10px;
+  position: absolute;
+  bottom: 138px;
+  right: 54px;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 2px 0 rgba(255, 255, 255, 0.8), 4px 4px 10px #b6b6b5, -4px -4px 10px #ffffff;
+}
+#k:before {
+  width: 10px;
+  height: 38px;
+  left: 14px;
+  top: -14px;
+  border-radius: inherit;
+  background: #EAEAE8;
+  box-shadow: inherit;
+}
+#k:after {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: #EAEAE8;
+}
+
+#h {
+  width: 38px;
+  height: 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 138px;
+  right: 112px;
+  box-shadow: inset 1px 1px 2px 0 rgba(255, 255, 255, 0.8), 4px 4px 10px #b6b6b5, -4px -4px 10px #ffffff;
+  background: #EAEAE8;
+}

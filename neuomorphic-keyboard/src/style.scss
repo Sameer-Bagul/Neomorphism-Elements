@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap');
+
+$primary-color: #F2F7FB;
+$key-corner: #E9F2FB;
+$shadow-color: #D9E3EC;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background: $primary-color;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100vh;
+  flex-direction: column;
+  
+  &__content {
+    width: 60%;
+  }
+}
+
+.textbox {
+  width: 100%;
+  resize: none;
+  background: linear-gradient(145deg, $primary-color, $key-corner);
+  box-shadow:  inset 8px 8px 15px $shadow-color;
+  border-radius: 12px;
+  border: none;
+  overflow: auto;
+  padding: 20px;
+  outline: none;
+  margin: 50px 0;
+}
+
+.keyboard {
+  padding: 25px;
+  background: linear-gradient(145deg, $primary-color, $key-corner);
+  box-shadow:  8px 8px 15px $shadow-color;
+  border-radius: 12px;
+  min-width: 750px;
+  max-width: 1000px;
+  
+  &__keys {
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+
+.key { 
+  display: flex;
+ 
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+  margin: 10px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, $primary-color, $key-corner);
+  box-shadow:  5px 5px 15px $shadow-color;
+  
+  &__letter {
+    background: -webkit-linear-gradient(245deg, #1E71F5, #3CDEE7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  &__down {
+    color: linear-gradient(45deg, #1E71F5, #3CDEE7);;
+    background: linear-gradient(145deg, $key-corner,  $primary-color);
+    box-shadow:  inset 5px 5px 5px $shadow-color;
+  }
+  
+  &__space {
+    width: 60%;
+  }
+}
